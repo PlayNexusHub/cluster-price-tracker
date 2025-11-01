@@ -33,7 +33,7 @@ const features = [
   },
   {
     icon: Users,
-    title: "4-Man Limits + Fair ORP",
+    title: "7-Man Limits + Fair ORP",
     description: "Balanced tribes for competitive, skill-based warfare"
   },
   {

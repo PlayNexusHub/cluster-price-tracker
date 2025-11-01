@@ -22,7 +22,7 @@ const Hero = () => {
               <span className="text-foreground">CRUSH ENEMIES.</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Ultimate ASA PvP Cluster • 15x Rates • 4-Man Tribes • 15+ Maps • Cross-Platform Carnage
+              Ultimate ASA PvP Cluster • 15x Rates • 7-Man Tribes • 15+ Maps • Cross-Platform Carnage
             </p>
           </div>
 

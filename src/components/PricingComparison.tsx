@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 
 const competitors = [
   {
-    name: "PrimeASA",
+    name: "Onyx",
     isPrime: true,
-    vip: "$12.99",
-    starter: "$6.99",
-    dino: "$8.99",
-    private10: "$10.99",
-    private20: "$19.99",
+    vip: "$9.99",
+    starter: "$4.99",
+    dino: "$6.99",
+    private10: "$8.99",
+    private20: "$16.99",
     features: [true, true, true, true, true]
   },
   {

@@ -25,7 +25,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all" />
             </div>
             <span className="text-xl font-bold text-gradient-crimson glow-crimson hidden sm:block">
-              PrimeASA
+              ONYX
             </span>
           </Link>
 

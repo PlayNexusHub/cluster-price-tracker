@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Skull className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-gradient-crimson">PrimeASA</span>
+              <span className="text-xl font-bold text-gradient-crimson">ONYX</span>
             </div>
             <p className="text-sm text-muted-foreground">
               The ultimate ARK ASA PvP cluster. Survive or perish.
@@ -112,7 +112,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 PrimeASA Cluster. Powered by PrimeASA - Survive or Perish.
+            © 2025 Onyx Cluster. Powered by Onyx - Survive or Perish.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             ARK: Survival Ascended is a trademark of Studio Wildcard. Not affiliated with Studio Wildcard.
