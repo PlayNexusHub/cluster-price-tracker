@@ -1,22 +1,38 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Skull } from "lucide-react";
+import { Menu, X, Skull, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Servers", path: "/servers" },
     { name: "Store", path: "/store" },
-    { name: "Havens", path: "/havens" },
+    { name: "Season Pass", path: "/season-pass" },
+    { name: "Servers", path: "/servers" },
     { name: "Leaderboards", path: "/leaderboards" },
-    { name: "Tribes", path: "/tribes" },
-    { name: "Tools", path: "/tools" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Recruitment", path: "/recruitment" },
-    { name: "Bounties", path: "/bounties" },
+    { name: "Live Map", path: "/live-map" },
+    { name: "Events", path: "/events" },
+    { name: "More", path: "#", submenu: [
+      { name: "Tribes", path: "/tribes" },
+      { name: "Recruitment", path: "/recruitment" },
+      { name: "Bounties", path: "/bounties" },
+      { name: "Auction House", path: "/auction" },
+      { name: "Wiki & Guides", path: "/wiki" },
+      { name: "Tools", path: "/tools" },
+      { name: "Gallery", path: "/gallery" },
+      { name: "Streams", path: "/streams" },
+      { name: "Anti-Cheat", path: "/anti-cheat" },
+      { name: "Private Havens", path: "/havens" },
+      { name: "Rules", path: "/rules" },
+      { name: "Support", path: "/support" },
+    ]},
   ];
 
   return (
@@ -36,16 +52,34 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all" />
-              </Link>
-            ))}
+            {navLinks.map((link) => 
+              link.submenu ? (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                    {link.name}
+                    <ChevronDown className="h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-card border-border/50">
+                    {link.submenu.map((sublink) => (
+                      <DropdownMenuItem key={sublink.path} asChild>
+                        <Link to={sublink.path} className="cursor-pointer">
+                          {sublink.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all" />
+                </Link>
+              )
+            )}
           </div>
 
           {/* CTA Buttons */}

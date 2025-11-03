@@ -39,26 +39,11 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/servers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Servers
-                </Link>
-              </li>
-              <li>
-                <Link to="/store" className="text-muted-foreground hover:text-primary transition-colors">
-                  Store
-                </Link>
-              </li>
-              <li>
-                <Link to="/havens" className="text-muted-foreground hover:text-primary transition-colors">
-                  Private Havens
-                </Link>
-              </li>
+              <li><Link to="/store" className="text-muted-foreground hover:text-primary transition-colors">Store</Link></li>
+              <li><Link to="/season-pass" className="text-muted-foreground hover:text-primary transition-colors">Season Pass</Link></li>
+              <li><Link to="/servers" className="text-muted-foreground hover:text-primary transition-colors">Servers</Link></li>
+              <li><Link to="/events" className="text-muted-foreground hover:text-primary transition-colors">Events</Link></li>
+              <li><Link to="/leaderboards" className="text-muted-foreground hover:text-primary transition-colors">Leaderboards</Link></li>
             </ul>
           </div>
 

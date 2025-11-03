@@ -15,6 +15,13 @@ import Tools from "./pages/Tools";
 import Gallery from "./pages/Gallery";
 import Recruitment from "./pages/Recruitment";
 import Bounties from "./pages/Bounties";
+import AuctionHouse from "./pages/AuctionHouse";
+import SeasonPass from "./pages/SeasonPass";
+import Events from "./pages/Events";
+import Wiki from "./pages/Wiki";
+import AntiCheat from "./pages/AntiCheat";
+import LiveMap from "./pages/LiveMap";
+import Streams from "./pages/Streams";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +45,13 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/bounties" element={<Bounties />} />
+          <Route path="/auction" element={<AuctionHouse />} />
+          <Route path="/season-pass" element={<SeasonPass />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/wiki" element={<Wiki />} />
+          <Route path="/anti-cheat" element={<AntiCheat />} />
+          <Route path="/live-map" element={<LiveMap />} />
+          <Route path="/streams" element={<Streams />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
