@@ -64,6 +64,33 @@ const Footer = () => {
 
           {/* Support */}
           <div>
+            <h3 className="font-bold mb-4 text-foreground">Community</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/tribes" className="text-muted-foreground hover:text-primary transition-colors">
+                  Tribes
+                </Link>
+              </li>
+              <li>
+                <Link to="/recruitment" className="text-muted-foreground hover:text-primary transition-colors">
+                  Recruitment
+                </Link>
+              </li>
+              <li>
+                <Link to="/bounties" className="text-muted-foreground hover:text-primary transition-colors">
+                  Bounties
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-muted-foreground hover:text-primary transition-colors">
+                  Gallery
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
             <h3 className="font-bold mb-4 text-foreground">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -77,14 +104,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://discord.gg/primeasa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Discord (50k+ Members)
-                </a>
+                <Link to="/tools" className="text-muted-foreground hover:text-primary transition-colors">
+                  PvP Tools
+                </Link>
               </li>
             </ul>
           </div>
